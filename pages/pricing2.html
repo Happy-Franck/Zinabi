@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing 2 | Zinabi</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <style>
+    .pricing2-hero {
+        background: var(--color-4);
+        padding: 140px 0 40px 0;
+        text-align: center;
+    }
+    .pricing2-title {
+        font-size: 2.7rem;
+        font-weight: bold;
+        color: var(--color-2);
+        margin-bottom: 0.5rem;
+    }
+    .pricing2-highlight {
+        display: inline-block;
+        border-bottom: 6px solid var(--color-1);
+        padding-bottom: 2px;
+        margin-bottom: 10px;
+    }
+    .pricing2-switch {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin: 2rem 0 1.5rem 0;
+    }
+    .pricing2-switch button {
+        border-radius: 20px;
+        border: 1.5px solid var(--color-1);
+        background: #fff;
+        color: var(--color-1);
+        font-weight: 600;
+        padding: 6px 22px;
+        transition: background 0.2s, color 0.2s;
+    }
+    .pricing2-switch button.active, .pricing2-switch button:focus {
+        background: var(--color-1);
+        color: #fff;
+    }
+    .pricing2-slider {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 1.5rem auto;
+    }
+    .pricing2-slider input[type=range] {
+        width: 100%;
+        accent-color: var(--color-1);
+    }
+    .pricing2-table {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(24,66,64,0.07);
+        margin-top: 2.5rem;
+        overflow-x: auto;
+    }
+    .pricing2-table th, .pricing2-table td {
+        text-align: center;
+        padding: 18px 12px;
+        border-bottom: 1px solid #eee;
+        font-size: 1rem;
+    }
+    .pricing2-table th {
+        background: var(--color-3);
+        color: var(--color-2);
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    .pricing2-table tr:last-child td {
+        border-bottom: none;
+    }
+    .pricing2-plan {
+        border: 2px solid var(--color-1);
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(24,66,64,0.06);
+        padding: 32px 18px 28px 18px;
+        margin-bottom: 24px;
+        transition: box-shadow 0.2s, border-color 0.2s;
+        max-width: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .pricing2-plan.featured {
+        border: 2.5px solid var(--color-2);
+        background: var(--color-3);
+        box-shadow: 0 6px 24px rgba(24,66,64,0.10);
+    }
+    .pricing2-plan .plan-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--color-2);
+        margin-bottom: 8px;
+    }
+    .pricing2-plan .plan-price {
+        font-size: 2.1rem;
+        font-weight: bold;
+        color: var(--color-1);
+        margin-bottom: 8px;
+    }
+    .pricing2-plan.featured .plan-title, .pricing2-plan.featured .plan-price {
+        color: var(--color-2);
+    }
+    .pricing2-plan .plan-desc {
+        color: #444;
+        font-size: 1rem;
+        margin-bottom: 18px;
+    }
+    .pricing2-plan .btn-custom {
+        margin-top: 10px;
+    }
+    /* Pour la card sélectionnée */
+    .pricing2-plan.selected, .pricing2-plan.featured {
+        border: 3px solid var(--color-2) !important;
+        box-shadow: 0 6px 24px rgba(24,66,64,0.10);
+        position: relative;
+        z-index: 2;
+    }
+    /* Pour la colonne sélectionnée du tableau */
+    .plan-col.selected {
+        border: 3px solid var(--color-2) !important;
+        background: #f7faff;
+        position: relative;
+        z-index: 1;
+    }
+    @media (max-width: 992px) {
+        .pricing2-table th, .pricing2-table td {
+            padding: 10px 6px;
+            font-size: 0.95rem;
+        }
+        .pricing2-plan {
+            padding: 18px 8px 16px 8px;
+        }
+    }
+    @media (min-width: 992px) {
+        .pricing2-plan {
+            width: 100%;
+            max-width: none;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-custom fixed-top navbar-expand-lg navbar-light bg-light navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo/logo.png" class="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./services.html">Service 1</a></li>
+                            <li><a class="dropdown-item" href="./services2.html">Service 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="./pricing2.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="auth">
+                <a href="../index.html" class="btn-custom primary">Get started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pricing2-hero">
+        <div class="container">
+            <h1 class="pricing2-title">Simple, <span class="pricing2-highlight">transparent pricing</span></h1>
+            <div class="pricing2-switch">
+                <button id="p2-monthly" class="active">Monthly billing</button>
+                <button id="p2-yearly">Annual billing</button>
+            </div>
+            <div class="pricing2-slider">
+                <input type="range" min="1" max="100" value="14" id="userSlider">
+                <div class="mt-2" style="color:var(--color-2); font-weight:600;"> <span id="userCount">14</span> users</div>
+            </div>
+            <div class="row justify-content-center mt-5 align-items-stretch">
+                <div class="col-lg-3 d-none d-lg-block"></div> <!-- Espace pour la colonne 'Features' du tableau -->
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <div class="pricing2-plan">
+                        <div class="plan-title">Basic plan</div>
+                        <div class="plan-price" id="p2-basic-price">$10/mth</div>
+                        <div class="plan-desc">Our most popular plan.</div>
+                        <a href="#" class="btn-custom secondary w-100">Get started</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <div class="pricing2-plan featured">
+                        <div class="plan-title">Business plan</div>
+                        <div class="plan-price" id="p2-business-price">$20/mth</div>
+                        <div class="plan-desc">Best for growing teams.</div>
+                        <a href="#" class="btn-custom primary w-100">Get started</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <div class="pricing2-plan">
+                        <div class="plan-title">Enterprise plan</div>
+                        <div class="plan-price" id="p2-enterprise-price">$40/mth</div>
+                        <div class="plan-desc">Best for large teams.</div>
+                        <a href="#" class="btn-custom secondary w-100">Get started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing2-table mt-5">
+                <table class="table mb-0">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th class="plan-col plan-basic">Basic</th>
+                            <th class="plan-col plan-business selected">Business</th>
+                            <th class="plan-col plan-enterprise">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Basic features</td>
+                            <td class="plan-col plan-basic"><i class="fa fa-check" style="color:var(--color-1);"></i></td>
+                            <td class="plan-col plan-business selected"><i class="fa fa-check" style="color:var(--color-1);"></i></td>
+                            <td class="plan-col plan-enterprise"><i class="fa fa-check" style="color:var(--color-1);"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Users</td>
+                            <td class="plan-col plan-basic">10</td>
+                            <td class="plan-col plan-business selected">20</td>
+                            <td class="plan-col plan-enterprise">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Individual data</td>
+                            <td class="plan-col plan-basic">20GB</td>
+                            <td class="plan-col plan-business selected">40GB</td>
+                            <td class="plan-col plan-enterprise">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td class="plan-col plan-basic"><i class="fa fa-check" style="color:var(--color-1);"></i></td>
+                            <td class="plan-col plan-business selected"><i class="fa fa-check" style="color:var(--color-1);"></i></td>
+                            <td class="plan-col plan-enterprise"><i class="fa fa-check" style="color:var(--color-1);"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Automated workflows</td>
+                            <td class="plan-col plan-basic">—</td>
+                            <td class="plan-col plan-business selected"><i class="fa fa-check" style="color:var(--color-1);"></i></td>
+                            <td class="plan-col plan-enterprise"><i class="fa fa-check" style="color:var(--color-1);"></i></td>
+                        </tr>
+                        <tr>
+                            <td>200+ integrations</td>
+                            <td class="plan-col plan-basic">—</td>
+                            <td class="plan-col plan-business">—</td>
+                            <td class="plan-col plan-enterprise selected"><i class="fa fa-check" style="color:var(--color-1);"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="first py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 contact">
+                        <img src="../img/logo/logo.png" alt="" class="footer-title" />
+                        <p class="footer-description">Immediately active the application <br>to have it Jenius account. The <br>process is easy, without difficulty.</p>
+                        <div class="socials-list">
+                            <a href="#" class="btn-social"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="btn-social"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="btn-social"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="btn-social"><i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                        <div class="row links-list">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 footer-section">
+                                <div class="colonne">
+                                    <h4 class="title">Features</h4>
+                                    <div class="colonne-links">
+                                        <a href="">For Personal</a>
+                                        <a href="">For Business</a>
+                                        <a href="">Transaction</a>
+                                        <a href="">Wealth</a>
+                                        <a href="">Investment</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 footer-section">
+                                <div class="colonne">
+                                    <h4 class="title">Help</h4>
+                                    <div class="colonne-links">
+                                        <a href="">Customer Support</a>
+                                        <a href="">FAQs</a>
+                                        <a href="">Fees, Rates & Limits</a>
+                                        <a href="">Security</a>
+                                        <a href="">Dictionary</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 footer-section">
+                                <div class="colonne">
+                                    <h4 class="title">Daily Finances</h4>
+                                    <div class="colonne-links">
+                                        <a href="">Cards</a>
+                                        <a href="">Payments</a>
+                                        <a href="">Linked Accounts</a>
+                                        <a href="">Budgeting & Analytics</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second">
+            <div class="container">
+                <p class="copyright">&copy; 2024 Balidev. All Rights Reserved.</p>
+                <ul class="links">
+                    <li><a href="">Terms & conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/custom.js"></script>
+    <script>
+    // Monthly/Yearly switch
+    const p2Monthly = document.getElementById('p2-monthly');
+    const p2Yearly = document.getElementById('p2-yearly');
+    const p2BasicPrice = document.getElementById('p2-basic-price');
+    const p2BusinessPrice = document.getElementById('p2-business-price');
+    const p2EnterprisePrice = document.getElementById('p2-enterprise-price');
+    if(p2Monthly && p2Yearly && p2BasicPrice && p2BusinessPrice && p2EnterprisePrice) {
+        p2Monthly.onclick = function() {
+            p2Monthly.classList.add('active');
+            p2Yearly.classList.remove('active');
+            p2BasicPrice.innerText = '$10/mth';
+            p2BusinessPrice.innerText = '$20/mth';
+            p2EnterprisePrice.innerText = '$40/mth';
+        };
+        p2Yearly.onclick = function() {
+            p2Yearly.classList.add('active');
+            p2Monthly.classList.remove('active');
+            p2BasicPrice.innerText = '$100/yr';
+            p2BusinessPrice.innerText = '$200/yr';
+            p2EnterprisePrice.innerText = '$400/yr';
+        };
+    }
+    // Slider users
+    const userSlider = document.getElementById('userSlider');
+    const userCount = document.getElementById('userCount');
+    if(userSlider && userCount) {
+        userSlider.oninput = function() {
+            userCount.innerText = userSlider.value;
+        };
+    }
+    // Sélection synchronisée card <-> colonne tableau
+    const planCards = document.querySelectorAll('.pricing2-plan');
+    const planCols = ['plan-basic', 'plan-business', 'plan-enterprise'];
+    planCards.forEach((card, idx) => {
+        card.onclick = function() {
+            // Retire la sélection de toutes les cards
+            planCards.forEach(c => c.classList.remove('selected', 'featured'));
+            // Ajoute la sélection à la card cliquée
+            card.classList.add('selected');
+            if(idx === 1) card.classList.add('featured');
+            // Retire la sélection de toutes les colonnes du tableau
+            planCols.forEach(col => {
+                document.querySelectorAll('.' + col).forEach(cell => cell.classList.remove('selected'));
+            });
+            // Ajoute la sélection à la colonne correspondante
+            document.querySelectorAll('.' + planCols[idx]).forEach(cell => cell.classList.add('selected'));
+        }
+    });
+    </script>
+</body>
+</html>

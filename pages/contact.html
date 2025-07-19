@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zinabi | Contact</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-custom fixed-top navbar-expand-lg navbar-light bg-light navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo/logo.png" class="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./services.html">Service 1</a></li>
+                            <li><a class="dropdown-item" href="./services2.html">Service 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="auth">
+                <a href="../index.html" class="btn-custom primary">Get started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="contact-hero" class="my-5 pt-5">
+        <div class="container">
+            <div class="center-description">
+                <h2 class="title">Contactez-nous</h2>
+                <p class="description">Nous sommes là pour répondre à toutes vos questions concernant <br>vos finances et nos services. N'hésitez pas à nous contacter.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-form">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 my-3">
+                    <h3 class="title">Envoyez-nous un message</h3>
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">Prénom</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Téléphone (optionnel)</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Sujet</label>
+                            <select class="form-select" id="subject" required>
+                                <option value="">Choisissez un sujet</option>
+                                <option value="general">Question générale</option>
+                                <option value="support">Support technique</option>
+                                <option value="business">Compte Business</option>
+                                <option value="investment">Investissement</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-custom primary">Envoyer le message</button>
+                    </form>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="contact-info">
+                        <h3 class="title">Informations de contact</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Adresse</h5>
+                                <p>123 Rue de la Finance<br>75001 Paris, France</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Téléphone</h5>
+                                <p>+33 1 23 45 67 89</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email</h5>
+                                <p>contact@zinabi.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa fa-clock-o"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Horaires d'ouverture</h5>
+                                <p>Lundi - Vendredi: 9h00 - 18h00<br>Samedi: 10h00 - 16h00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-stats">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex flex-column align-items-center stat-item">
+                    <span class="count">24/7</span>
+                    <h5 class="information">Support Client</h5>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex flex-column align-items-center stat-item">
+                    <span class="count">< 2h</span>
+                    <h5 class="information">Temps de Réponse</h5>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex flex-column align-items-center stat-item">
+                    <span class="count">98%</span>
+                    <h5 class="information">Satisfaction Client</h5>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 d-flex flex-column align-items-center stat-item">
+                    <span class="count">15+</span>
+                    <h5 class="information">Langues Supportées</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-map" class="my-5">
+        <div class="container">
+            <div class="center-description">
+                <h2 class="title">Trouvez-nous</h2>
+                <p class="description">Visitez nos bureaux ou contactez-nous en ligne pour discuter de vos besoins financiers.</p>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fa fa-map-marker fa-3x"></i>
+                            <p>Carte interactive - Intégrez ici votre carte Google Maps ou autre service de cartographie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-faq" class="my-5">
+        <div class="container">
+            <div class="center-description">
+                <h2 class="title">Questions Fréquentes</h2>
+                <p class="description">Trouvez rapidement des réponses aux questions les plus courantes.</p>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="faq-item">
+                        <h5 class="faq-question">Comment créer un compte Zinabi ?</h5>
+                        <p class="faq-answer">Cliquez sur "Get Started" et suivez les étapes de création de compte. Le processus est simple et sécurisé.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">Quels sont les frais de transaction ?</h5>
+                        <p class="faq-answer">Nos frais sont transparents et compétitifs. Consultez notre page tarifs pour plus de détails.</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="faq-item">
+                        <h5 class="faq-question">Mes données sont-elles sécurisées ?</h5>
+                        <p class="faq-answer">Oui, nous utilisons un cryptage de niveau bancaire pour protéger toutes vos informations.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h5 class="faq-question">Comment contacter le support ?</h5>
+                        <p class="faq-answer">Utilisez ce formulaire, appelez-nous ou utilisez le chat en ligne pour une assistance immédiate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="first py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 contact">
+                        <img src="../img/logo/logo.png" alt="" class="footer-title" />
+                        <p class="footer-description">Activez immédiatement l'application <br>pour avoir votre compte Zinabi. Le <br>processus est simple, sans difficulté.</p>
+                        <div class="socials-list">
+                            <a href="" class="btn-social">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="" class="btn-social">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            <a href="" class="btn-social">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            <a href="" class="btn-social">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                        <div class="row links-list">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 footer-section">
+                                <div class="colonne">
+                                    <h4 class="title">Fonctionnalités</h4>
+                                    <div class="colonne-links">
+                                        <a href="">Personnel</a>
+                                        <a href="">Business</a>
+                                        <a href="">Transactions</a>
+                                        <a href="">Épargne</a>
+                                        <a href="">Investissement</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 footer-section">
+                                <div class="colonne">
+                                    <h4 class="title">Aide</h4>
+                                    <div class="colonne-links">
+                                        <a href="">Support Client</a>
+                                        <a href="">FAQ</a>
+                                        <a href="">Tarifs et Limites</a>
+                                        <a href="">Sécurité</a>
+                                        <a href="">Glossaire</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 footer-section">
+                                <div class="colonne">
+                                    <h4 class="title">Finances Quotidiennes</h4>
+                                    <div class="colonne-links">
+                                        <a href="">Cartes</a>
+                                        <a href="">Paiements</a>
+                                        <a href="">Comptes Liés</a>
+                                        <a href="">Budget & Analyses</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second">
+            <div class="container">
+                <p class="copyright">&copy; 2024 Balidev. Tous droits réservés.</p>
+                <ul class="links">
+                    <li>
+                        <a href="">Conditions générales</a>
+                    </li>
+                    <li>
+                        <a href="">Politique de confidentialité</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/custom.js"></script>
+</body>
+
+</html>
