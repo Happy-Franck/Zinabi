@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="../css/custom.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar navbar-custom fixed-top navbar-expand-lg navbar-light bg-light navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="../index.html">
+            <a class="navbar-brand" href="#">
                 <img src="../img/logo/logo.png" class="logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -20,15 +21,11 @@
             </button>
             <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./about.html">About Us</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="./services.html">Service 1</a></li>
-                            <li><a class="dropdown-item" href="./services2.html">Service 2</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -38,8 +35,9 @@
                             <li><a class="dropdown-item" href="./pricing2.html">Pricing 2</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
                 </ul>
             </div>
             <div class="auth">
@@ -48,163 +46,71 @@
         </div>
     </nav>
 
-    <!-- HERO & PRICING CARDS -->
-    <section id="pricing-hero" style="padding: 160px 0 60px 0; background: var(--color-4);">
+    <!-- Pricing Hero Section -->
+    <section class="pricing-hero">
         <div class="container text-center">
-            <span class="badge bg-light text-dark mb-3" style="font-weight:600; font-size:1rem; letter-spacing:1px;">Choose Your Plan</span>
-            <h1 class="title mb-3">Select The Best Plan For Your Needs</h1>
-            <p class="description mb-4">Flexible pricing for every stage of your financial journey. Try Zinabi for free or unlock more power with our premium plans.</p>
-            <div class="d-flex justify-content-center align-items-center gap-3 mb-5 flex-wrap">
-                <button class="btn btn-outline-dark active" id="monthlyBtn" style="border-radius:20px;">Monthly Plan</button>
-                <button class="btn btn-outline-dark" id="yearlyBtn" style="border-radius:20px;">Yearly Plan</button>
+            <h1 class="pricing-title">Choose your plan</h1>
+            <p class="pricing-subtitle">14 days unlimited free trial. No contract or credit card required.</p>
+            
+            <!-- Pricing Toggle -->
+            <div class="pricing-toggle">
+                <span class="toggle-option active" id="monthlyToggle">Monthly</span>
+                <span class="toggle-option" id="yearlyToggle">Yearly</span>
+                <span class="discount-badge">20% OFF</span>
             </div>
-            <div class="row justify-content-center g-4" id="pricingCards">
-                <!-- Starter -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="card-custom text-center h-100 p-4">
-                        <div class="mb-2"><i class="fa fa-leaf fa-2x" style="color:var(--color-1);"></i></div>
-                        <h4 class="title mb-2">Starter</h4>
-                        <div class="mb-2" style="font-size:2rem; color:var(--color-1); font-weight:bold;">Free</div>
-                        <ul class="list-unstyled mb-3">
-                            <li>Zinabi domain</li>
-                            <li>3 accounts</li>
-                            <li>50 transactions/month</li>
-                            <li>Basic analytics</li>
-                            <li>Community support</li>
-                        </ul>
-                        <a href="#" class="btn-custom primary">Start Free</a>
-                    </div>
-                </div>
-                <!-- Basic -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="card-custom text-center h-100 p-4" style="border:2px solid var(--color-1);">
-                        <div class="mb-2"><i class="fa fa-star fa-2x" style="color:var(--color-1);"></i></div>
-                        <h4 class="title mb-2">Basic</h4>
-                        <div class="mb-2" id="basicPrice" style="font-size:2rem; color:var(--color-1); font-weight:bold;">$9.99 <span style="font-size:1rem; color:#444;">/month</span></div>
-                        <ul class="list-unstyled mb-3">
-                            <li>Zinabi domain</li>
-                            <li>100 accounts</li>
-                            <li>500 transactions/month</li>
-                            <li>Advanced analytics</li>
-                            <li>Email support</li>
-                        </ul>
-                        <a href="#" class="btn-custom secondary">Start 7 day trial</a>
-                    </div>
-                </div>
-                <!-- Business -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="card-custom text-center h-100 p-4" style="background: linear-gradient(135deg, var(--color-1) 60%, var(--color-2) 100%); color:#fff;">
-                        <div class="mb-2"><i class="fa fa-briefcase fa-2x" style="color:#fff;"></i></div>
-                        <h4 class="title mb-2" style="color:#fff;">Business</h4>
-                        <div class="mb-2" id="businessPrice" style="font-size:2rem; color:#fff; font-weight:bold;">$29.99 <span style="font-size:1rem; color:#eee;">/month</span></div>
-                        <ul class="list-unstyled mb-3">
-                            <li>Zinabi domain</li>
-                            <li>Unlimited accounts</li>
-                            <li>Unlimited transactions</li>
-                            <li>Premium analytics</li>
-                            <li>Priority support</li>
-                        </ul>
-                        <a href="#" class="btn-custom secondary" style="background:#fff; color:var(--color-1); border-color:#fff;">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- PARTNERS/LOGOS -->
-    <section id="pricing-logos" style="padding: 40px 0 40px 0; background: var(--color-3);">
-        <div class="container text-center">
-            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
-                <img src="../img/Partner/1.png" alt="" style="height:36px;">
-                <img src="../img/Partner/2.png" alt="" style="height:36px;">
-                <img src="../img/Partner/3.png" alt="" style="height:36px;">
-                <img src="../img/Partner/4.png" alt="" style="height:36px;">
-                <img src="../img/Partner/5.png" alt="" style="height:36px;">
-            </div>
-        </div>
-    </section>
+            <!-- Pricing Cards -->
+            <div class="pricing-cards">
+                <!-- Starter Card -->
+                <div class="pricing-card">
+                    <h3 class="card-title">Starter</h3>
+                    <div class="card-price">
+                        <span id="starterPrice">$29</span> <span class="period" id="starterPeriod">/MO</span>
+                    </div>
+                    <ul class="card-features">
+                        <li>10,000 Visitors</li>
+                        <li>Create Unlimited Widgets</li>
+                        <li>All Widget Types</li>
+                        <li>3rd Party Integrations</li>
+                        <li>Advanced Targeting</li>
+                        <li>Widget A/B Testing</li>
+                    </ul>
+                    <button class="card-button">GET STARTED</button>
+                </div>
 
-    <!-- ADVANTAGES -->
-    <section id="pricing-advantages" style="padding: 80px 0; background: var(--color-4);">
-        <div class="container">
-            <h2 class="title text-center mb-5">A Platform Designed For Your Growth</h2>
-            <div class="row g-4">
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="card-custom text-center h-100 p-4">
-                        <div class="mb-2"><i class="fa fa-cogs fa-2x" style="color:var(--color-1);"></i></div>
-                        <h5 class="title mb-2">Automation</h5>
-                        <p class="card-detail-custom">Automate your finances and save time with smart workflows.</p>
+                <!-- Pro Card -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <h3 class="card-title">Pro</h3>
+                    <div class="card-price">
+                        <span id="proPrice">$46</span> <span class="period" id="proPeriod">/MO</span>
                     </div>
+                    <ul class="card-features">
+                        <li>10,000 Visitors</li>
+                        <li>All in Starter</li>
+                        <li>Website Personalization</li>
+                        <li>A/B Testing and Experimentation</li>
+                        <li>Manage Multiple Websites</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <button class="card-button">GET STARTED</button>
                 </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="card-custom text-center h-100 p-4">
-                        <div class="mb-2"><i class="fa fa-users fa-2x" style="color:var(--color-1);"></i></div>
-                        <h5 class="title mb-2">Collaboration</h5>
-                        <p class="card-detail-custom">Work together with your team or family for better results.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="card-custom text-center h-100 p-4">
-                        <div class="mb-2"><i class="fa fa-line-chart fa-2x" style="color:var(--color-1);"></i></div>
-                        <h5 class="title mb-2">Analytics</h5>
-                        <p class="card-detail-custom">Get real-time insights and detailed reports on your finances.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                    <div class="card-custom text-center h-100 p-4">
-                        <div class="mb-2"><i class="fa fa-globe fa-2x" style="color:var(--color-1);"></i></div>
-                        <h5 class="title mb-2">Global Access</h5>
-                        <p class="card-detail-custom">Access your accounts and tools from anywhere, anytime.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- FAQ -->
-    <section id="pricing-faq" style="padding: 80px 0; background: var(--color-3);">
-        <div class="container">
-            <h2 class="title text-center mb-5">Have Any Questions?</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="faq1">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                            What is Zinabi and how does it work?
-                        </button>
-                    </h2>
-                    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">Zinabi is a modern financial platform that helps you manage, grow, and optimize your finances with smart tools and expert support.</div>
+                <!-- Enterprise Card -->
+                <div class="pricing-card">
+                    <h3 class="card-title">Enterprise</h3>
+                    <div class="card-price">
+                        Custom
                     </div>
-                </div>
-                <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="faq2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            Can I try Zinabi for free?
-                        </button>
-                    </h2>
-                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">Yes! The Starter plan is free and you can try premium features with a 7-day trial.</div>
-                    </div>
-                </div>
-                <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="faq3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            Is my data secure with Zinabi?
-                        </button>
-                    </h2>
-                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">Absolutely. We use bank-level encryption and security best practices to keep your data safe.</div>
-                    </div>
-                </div>
-                <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="faq4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                            Can I upgrade or downgrade my plan anytime?
-                        </button>
-                    </h2>
-                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">Yes, you can change your plan at any time from your dashboard.</div>
-                    </div>
+                    <ul class="card-features">
+                        <li>10,000 Visitors</li>
+                        <li>All in Starter and Pro</li>
+                        <li>Custom Contract</li>
+                        <li>Clearbit and Albacross</li>
+                        <li>Custom Integrations</li>
+                        <li>Dedicated Manager</li>
+                    </ul>
+                    <button class="card-button">CONTACT US</button>
                 </div>
             </div>
         </div>
@@ -276,28 +182,60 @@
             </div>
         </div>
     </footer>
+
     <script src="../js/bootstrap.js"></script>
     <script src="../js/custom.js"></script>
     <script>
-    // Simple switch for monthly/yearly pricing
-    const monthlyBtn = document.getElementById('monthlyBtn');
-    const yearlyBtn = document.getElementById('yearlyBtn');
-    const basicPrice = document.getElementById('basicPrice');
-    const businessPrice = document.getElementById('businessPrice');
-    if(monthlyBtn && yearlyBtn && basicPrice && businessPrice) {
-        monthlyBtn.onclick = function() {
-            monthlyBtn.classList.add('active');
-            yearlyBtn.classList.remove('active');
-            basicPrice.innerHTML = '$9.99 <span style="font-size:1rem; color:#444;">/month</span>';
-            businessPrice.innerHTML = '$29.99 <span style="font-size:1rem; color:#eee;">/month</span>';
+        // Pricing toggle functionality
+        const monthlyToggle = document.getElementById('monthlyToggle');
+        const yearlyToggle = document.getElementById('yearlyToggle');
+        
+        // Price elements
+        const starterPrice = document.getElementById('starterPrice');
+        const proPrice = document.getElementById('proPrice');
+        const starterPeriod = document.getElementById('starterPeriod');
+        const proPeriod = document.getElementById('proPeriod');
+
+        // Monthly prices
+        const monthlyPrices = {
+            starter: 29,
+            pro: 46
         };
-        yearlyBtn.onclick = function() {
-            yearlyBtn.classList.add('active');
-            monthlyBtn.classList.remove('active');
-            basicPrice.innerHTML = '$99 <span style="font-size:1rem; color:#444;">/year</span>';
-            businessPrice.innerHTML = '$299 <span style="font-size:1rem; color:#eee;">/year</span>';
+
+        // Yearly prices (20% discount)
+        const yearlyPrices = {
+            starter: Math.round(monthlyPrices.starter * 12 * 0.8),
+            pro: Math.round(monthlyPrices.pro * 12 * 0.8)
         };
-    }
+
+        function updatePrices(isYearly) {
+            if (isYearly) {
+                starterPrice.textContent = '$' + yearlyPrices.starter;
+                proPrice.textContent = '$' + yearlyPrices.pro;
+                starterPeriod.textContent = '/YR';
+                proPeriod.textContent = '/YR';
+            } else {
+                starterPrice.textContent = '$' + monthlyPrices.starter;
+                proPrice.textContent = '$' + monthlyPrices.pro;
+                starterPeriod.textContent = '/MO';
+                proPeriod.textContent = '/MO';
+            }
+        }
+
+        monthlyToggle.addEventListener('click', () => {
+            monthlyToggle.classList.add('active');
+            yearlyToggle.classList.remove('active');
+            updatePrices(false);
+        });
+
+        yearlyToggle.addEventListener('click', () => {
+            yearlyToggle.classList.add('active');
+            monthlyToggle.classList.remove('active');
+            updatePrices(true);
+        });
+
+        // Initialize with monthly pricing
+        updatePrices(false);
     </script>
 </body>
 </html>

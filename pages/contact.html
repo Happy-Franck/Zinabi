@@ -8,6 +8,66 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/fontawesome.css">
     <link rel="stylesheet" href="../css/custom.css">
+    <style>
+        :root {
+            --primary-color: var(--color-1);
+            --light-color: var(--color-3);
+            --dark-color: var(--color-2);
+            --dark-grey: #374151;
+            --light-grey: #9ca3af;
+            --white: #ffffff;
+            --light-bg: #f9fafb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-grey);
+        }
+
+        .navbar-custom {
+            background: var(--white) !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: var(--dark-grey) !important;
+        }
+
+        .nav-link {
+            color: var(--dark-grey) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        .btn-signin {
+            background: var(--white);
+            color: var(--dark-grey);
+            border: 1px solid #d1d5db;
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            margin-right: 0.5rem;
+        }
+
+        .btn-signup {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            border: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,24 +90,11 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="./services.html">Service 1</a></li>
-                            <li><a class="dropdown-item" href="./services2.html">Service 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">Pricing</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="./pricing.html">Pricing 1</a></li>
                             <li><a class="dropdown-item" href="./pricing2.html">Pricing 2</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="./contact.html">Contact</a>
@@ -207,20 +254,24 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="faq-item">
+                        <div class="faq-icon">?</div>
                         <h5 class="faq-question">Comment créer un compte Zinabi ?</h5>
                         <p class="faq-answer">Cliquez sur "Get Started" et suivez les étapes de création de compte. Le processus est simple et sécurisé.</p>
                     </div>
                     <div class="faq-item">
+                        <div class="faq-icon">?</div>
                         <h5 class="faq-question">Quels sont les frais de transaction ?</h5>
                         <p class="faq-answer">Nos frais sont transparents et compétitifs. Consultez notre page tarifs pour plus de détails.</p>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                     <div class="faq-item">
+                        <div class="faq-icon">?</div>
                         <h5 class="faq-question">Mes données sont-elles sécurisées ?</h5>
                         <p class="faq-answer">Oui, nous utilisons un cryptage de niveau bancaire pour protéger toutes vos informations.</p>
                     </div>
                     <div class="faq-item">
+                        <div class="faq-icon">?</div>
                         <h5 class="faq-question">Comment contacter le support ?</h5>
                         <p class="faq-answer">Utilisez ce formulaire, appelez-nous ou utilisez le chat en ligne pour une assistance immédiate.</p>
                     </div>
@@ -309,6 +360,30 @@
     </footer>
     <script src="../js/bootstrap.js"></script>
     <script src="../js/custom.js"></script>
+    <script>
+        // FAQ Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
