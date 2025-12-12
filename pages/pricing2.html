@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing 2 | Zinabi</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body>
+    <nav class="navbar navbar-custom fixed-top navbar-expand-lg navbar-light bg-light navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo/logo.png" class="logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Pricing</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="./pricing.html">Pricing 1</a></li>
+                            <li><a class="dropdown-item" href="./pricing2.html">Pricing 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="auth">
+                <a href="../index.html" class="btn-custom primary">Get started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pricing2-hero">
+        <div class="container">
+            <h1 class="pricing2-title">Simple, transparent pricing</h1>
+            <div class="pricing2-switch">
+                <button id="p2-monthly" class="active">Monthly billing</button>
+                <button id="p2-yearly">Annual billing</button>
+            </div>
+            <div class="pricing2-table mt-5">
+                <table class="table mb-0">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;"></th>
+                            <th style="width: 23.33%;">
+                                <div class="pricing2-plan">
+                                    <div class="plan-title">Basic plan</div>
+                                    <div class="plan-price" id="p2-basic-price">$10/mth</div>
+                                    <div class="plan-desc">Our most popular plan.</div>
+                                    <a href="#" class="btn-custom secondary w-100">Get started</a>
+                                </div>
+                            </th>
+                            <th class="popular" style="width: 23.33%;">
+                                <div class="pricing2-plan">
+                                    <div class="plan-title">Business plan</div>
+                                    <div class="plan-price" id="p2-business-price">$20/mth</div>
+                                    <div class="plan-desc">Best for growing teams.</div>
+                                    <a href="#" class="btn-custom primary w-100">Get started</a>
+                                </div>
+                            </th>
+                            <th style="width: 23.33%;">
+                                <div class="pricing2-plan">
+                                    <div class="plan-title">Enterprise plan</div>
+                                    <div class="plan-price" id="p2-enterprise-price">$40/mth</div>
+                                    <div class="plan-desc">Best for large teams.</div>
+                                    <a href="#" class="btn-custom secondary w-100">Get started</a>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div class="pricing2-cell-content">Storage</div></td>
+                            <td class="plan-col plan-basic"><div class="pricing2-cell-content">5 GB</div></td>
+                            <td class="plan-col plan-business"><div class="pricing2-cell-content">50 GB</div></td>
+                            <td class="plan-col plan-enterprise"><div class="pricing2-cell-content">500 GB</div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="pricing2-cell-content">Users</div></td>
+                            <td class="plan-col plan-basic"><div class="pricing2-cell-content">5</div></td>
+                            <td class="plan-col plan-business"><div class="pricing2-cell-content">25</div></td>
+                            <td class="plan-col plan-enterprise"><div class="pricing2-cell-content">Unlimited</div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="pricing2-cell-content">API calls</div></td>
+                            <td class="plan-col plan-basic"><div class="pricing2-cell-content">1,000/mo</div></td>
+                            <td class="plan-col plan-business"><div class="pricing2-cell-content">10,000/mo</div></td>
+                            <td class="plan-col plan-enterprise"><div class="pricing2-cell-content">Unlimited</div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="pricing2-cell-content">Email support</div></td>
+                            <td class="plan-col plan-basic"><div class="pricing2-cell-content">✓</div></td>
+                            <td class="plan-col plan-business"><div class="pricing2-cell-content">✓</div></td>
+                            <td class="plan-col plan-enterprise"><div class="pricing2-cell-content">✓</div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="pricing2-cell-content">Priority support</div></td>
+                            <td class="plan-col plan-basic"><div class="pricing2-cell-content">—</div></td>
+                            <td class="plan-col plan-business"><div class="pricing2-cell-content">✓</div></td>
+                            <td class="plan-col plan-enterprise"><div class="pricing2-cell-content">✓</div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="pricing2-cell-content">Advanced analytics</div></td>
+                            <td class="plan-col plan-basic"><div class="pricing2-cell-content">—</div></td>
+                            <td class="plan-col plan-business"><div class="pricing2-cell-content">✓</div></td>
+                            <td class="plan-col plan-enterprise"><div class="pricing2-cell-content">✓</div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="pricing2-cell-content">Custom integrations</div></td>
+                            <td class="plan-col plan-basic"><div class="pricing2-cell-content">—</div></td>
+                            <td class="plan-col plan-business"><div class="pricing2-cell-content">—</div></td>
+                            <td class="plan-col plan-enterprise"><div class="pricing2-cell-content">✓</div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="pricing2-cell-content">Dedicated account manager</div></td>
+                            <td class="plan-col plan-basic"><div class="pricing2-cell-content">—</div></td>
+                            <td class="plan-col plan-business"><div class="pricing2-cell-content">—</div></td>
+                            <td class="plan-col plan-enterprise"><div class="pricing2-cell-content">✓</div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="pricing2-cell-content">SLA guarantee</div></td>
+                            <td class="plan-col plan-basic"><div class="pricing2-cell-content">—</div></td>
+                            <td class="plan-col plan-business"><div class="pricing2-cell-content">99.5%</div></td>
+                            <td class="plan-col plan-enterprise"><div class="pricing2-cell-content">99.9%</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="first py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 contact">
+                        <img src="../img/logo/logo.png" alt="" class="footer-title" />
+                        <p class="footer-description">Immediately active the application <br>to have it Jenius account. The <br>process is easy, without difficulty.</p>
+                        <div class="socials-list">
+                            <a href="#" class="btn-social"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="btn-social"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="btn-social"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="btn-social"><i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                        <div class="row links-list">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 footer-section">
+                                <div class="colonne">
+                                    <h4 class="title">Features</h4>
+                                    <div class="colonne-links">
+                                        <a href="">For Personal</a>
+                                        <a href="">For Business</a>
+                                        <a href="">Transaction</a>
+                                        <a href="">Wealth</a>
+                                        <a href="">Investment</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 footer-section">
+                                <div class="colonne">
+                                    <h4 class="title">Help</h4>
+                                    <div class="colonne-links">
+                                        <a href="">Customer Support</a>
+                                        <a href="">FAQs</a>
+                                        <a href="">Fees, Rates & Limits</a>
+                                        <a href="">Security</a>
+                                        <a href="">Dictionary</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 footer-section">
+                                <div class="colonne">
+                                    <h4 class="title">Daily Finances</h4>
+                                    <div class="colonne-links">
+                                        <a href="">Cards</a>
+                                        <a href="">Payments</a>
+                                        <a href="">Linked Accounts</a>
+                                        <a href="">Budgeting & Analytics</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second">
+            <div class="container">
+                <p class="copyright">&copy; 2024 Balidev. All Rights Reserved.</p>
+                <ul class="links">
+                    <li><a href="">Terms & conditions</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/custom.js"></script>
+    <script>
+    // Monthly/Yearly switch
+    const p2Monthly = document.getElementById('p2-monthly');
+    const p2Yearly = document.getElementById('p2-yearly');
+    const p2BasicPrice = document.getElementById('p2-basic-price');
+    const p2BusinessPrice = document.getElementById('p2-business-price');
+    const p2EnterprisePrice = document.getElementById('p2-enterprise-price');
+    if(p2Monthly && p2Yearly && p2BasicPrice && p2BusinessPrice && p2EnterprisePrice) {
+        p2Monthly.onclick = function() {
+            p2Monthly.classList.add('active');
+            p2Yearly.classList.remove('active');
+            p2BasicPrice.innerText = '$10/mth';
+            p2BusinessPrice.innerText = '$20/mth';
+            p2EnterprisePrice.innerText = '$40/mth';
+        };
+        p2Yearly.onclick = function() {
+            p2Yearly.classList.add('active');
+            p2Monthly.classList.remove('active');
+            p2BasicPrice.innerText = '$100/yr';
+            p2BusinessPrice.innerText = '$200/yr';
+            p2EnterprisePrice.innerText = '$400/yr';
+        };
+    }
+
+    
+    // Ajouter les bordures à la colonne du plan populaire
+    document.addEventListener('DOMContentLoaded', function() {
+        // Trouver l'index de la colonne populaire dans le header
+        const headerCells = document.querySelectorAll('.pricing2-table thead th');
+        let popularColumnIndex = -1;
+        
+        headerCells.forEach((cell, index) => {
+            if (cell.classList.contains('popular')) {
+                popularColumnIndex = index;
+            }
+        });
+        
+        if (popularColumnIndex !== -1) {
+            // Sélectionner toutes les cellules de la colonne populaire dans le tbody
+            const tbodyRows = document.querySelectorAll('.pricing2-table tbody tr');
+            
+            tbodyRows.forEach((row, rowIndex) => {
+                const cells = row.querySelectorAll('td');
+                if (cells[popularColumnIndex]) {
+                    // Pour le premier élément : seulement left et right (pas de top)
+                    if (rowIndex === 0) {
+                        cells[popularColumnIndex].style.boxShadow = 'inset 2px 0 0 0 var(--color-1), inset -2px 0 0 0 var(--color-1)';
+                    }
+                    // Pour le dernier élément : left, right et bottom
+                    else if (rowIndex === tbodyRows.length - 1) {
+                        cells[popularColumnIndex].style.boxShadow = 'inset 2px 0 0 0 var(--color-1), inset -2px 0 0 0 var(--color-1), inset 0 -2px 0 0 var(--color-1)';
+                    }
+                    // Pour les éléments du milieu : left et right
+                    else {
+                        cells[popularColumnIndex].style.boxShadow = 'inset 2px 0 0 0 var(--color-1), inset -2px 0 0 0 var(--color-1)';
+                    }
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>
